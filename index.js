@@ -28,7 +28,9 @@ app.post('/proxy', async (req, res) => {
         });
     }
 });
-
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+})
 app.listen(PORT, () => {
     console.log(`🚀 Proxy server running on http://localhost:${PORT}`);
 });
